@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expensify - Student Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+        <h1>Expensify</h1>
+        <button id="themeBtn">🌙 Dark Mode</button>
+
+</header>
+
+<div class="container">
+
+    <div class="summary">
+
+        <div class="card income-card">
+            <h3>Total Income</h3>
+            <p id="income">₹0</p>
+        </div>
+
+        <div class="card expense-card">
+            <h3>Total Expense</h3>
+            <p id="expense">₹0</p>
+        </div>
+
+        <div class="card balance-card">
+            <h3>Balance</h3>
+            <p id="balance">₹0</p>
+        </div>
+
+        <div class="card saving-card">
+            <h3>Savings</h3>
+            <p id="saving">0%</p>
+        </div>
+
+    </div>
+
+    <form id="transactionForm">
+        <label for="title">Transaction Name</label>
+        <input
+            type="text"
+            id="title"
+            placeholder="Transaction Name"
+            required
+        >
+        <label for="amount">Amount (₹)</label>
+        <input
+            type="number"
+            id="amount"
+            placeholder="Amount"
+            min="1"
+            required
+        >
+
+        <label for="type">Transaction Type</label>
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+        <label for="category">Reason</label>
+        <select id="category">
+            <option>Select the Reason</option>
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Study</option>
+            <option>Entertainment</option>
+            <option>Shopping</option>
+            <option>Other</option>
+        </select>
+
+        <button type="submit">Add Transaction</button>
+
+    </form>
+
+    <div class="feedback">
+        <h3 id="message">Start tracking your finances.</h3>
+    </div>
+
+    <h2>Transaction History</h2>
+
+    <ul id="transactionList"></ul>
+    <button type="button" id="resetBtn" class="reset-btn">
+    Reset All Data
+    </button>
+
+</div>
+<footer>
+    <p>Made with ❤️ by Utsav Kumar Jha | +91 70612 61363 | utsavkumarjha6@gmail.com</p>
+    <p>&copy; 2026 Expensify. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
